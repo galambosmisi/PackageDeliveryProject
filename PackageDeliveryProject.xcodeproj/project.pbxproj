@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6AB5C6FC1FB33C4F00FD623A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5C6FB1FB33C4F00FD623A /* main.cpp */; };
+		6A427E981FBA34AB00257640 /* Simulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A427E971FBA34AB00257640 /* Simulation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6AB5C6F81FB33C4F00FD623A /* PackageDeliveryProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PackageDeliveryProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AB5C6FB1FB33C4F00FD623A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6A427E8A1FBA341100257640 /* PackageDeliveryProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PackageDeliveryProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A427E951FBA34A500257640 /* Simulation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Simulation.hpp; path = Headers/Simulation.hpp; sourceTree = "<group>"; };
+		6A427E971FBA34AB00257640 /* Simulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulation.cpp; path = Sources/Simulation.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,28 +39,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A427E911FBA349400257640 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6A427E951FBA34A500257640 /* Simulation.hpp */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		6A427E921FBA349A00257640 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6A427E971FBA34AB00257640 /* Simulation.cpp */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
 		6AB5C6EF1FB33C4F00FD623A = {
 			isa = PBXGroup;
 			children = (
-				6AB5C6FA1FB33C4F00FD623A /* PackageDeliveryProject */,
-				6AB5C6F91FB33C4F00FD623A /* Products */,
+				6A427E911FBA349400257640 /* Headers */,
+				6A427E921FBA349A00257640 /* Sources */,
+				6A427E8A1FBA341100257640 /* PackageDeliveryProject */,
 			);
-			sourceTree = "<group>";
-		};
-		6AB5C6F91FB33C4F00FD623A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6AB5C6F81FB33C4F00FD623A /* PackageDeliveryProject */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6AB5C6FA1FB33C4F00FD623A /* PackageDeliveryProject */ = {
-			isa = PBXGroup;
-			children = (
-				6AB5C6FB1FB33C4F00FD623A /* main.cpp */,
-			);
-			path = PackageDeliveryProject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,7 +81,7 @@
 			);
 			name = PackageDeliveryProject;
 			productName = PackageDeliveryProject;
-			productReference = 6AB5C6F81FB33C4F00FD623A /* PackageDeliveryProject */;
+			productReference = 6A427E8A1FBA341100257640 /* PackageDeliveryProject */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +107,7 @@
 				en,
 			);
 			mainGroup = 6AB5C6EF1FB33C4F00FD623A;
-			productRefGroup = 6AB5C6F91FB33C4F00FD623A /* Products */;
+			productRefGroup = 6AB5C6EF1FB33C4F00FD623A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -119,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AB5C6FC1FB33C4F00FD623A /* main.cpp in Sources */,
+				6A427E981FBA34AB00257640 /* Simulation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

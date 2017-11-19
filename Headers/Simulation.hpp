@@ -31,8 +31,10 @@ private:
     std::vector<Node*> peaks;                                                                       //Gráf csúcsai
     
 public:
+    //Konstruktor, destruktor
     Graph(std::string file_name) {loadGraph(file_name);}
     ~Graph() {for(unsigned i =0; i<peaks.size(); i++) {delete peaks[i];};}
+    //Függvények
     void initialization(unsigned size);                                                                  //Peaks vektor feltöltése üres Node* -al a hivatkozások miatt
     void loadGraph(std::string);                                                                    //Gráf beolvasása
     void insert(int _ID, bool _storage, std::vector<Node::Road> _connects);                         //Új csúcs "hozzáadása"
@@ -52,7 +54,9 @@ private:
     bool deliverd;                                                                                  //Kiszállítva?
 
 public:
+    //Konstruktor
     Product(unsigned p, int q, int _ID) : ID(_ID), place(p), quantity(q), added(false), deliverd(false) {}
+    //Függvények
     int getID() const {return ID;}                                                                  //Melyik csomag?
     int getPlace() const {return place;}                                                            //Hova kell vinni?
     int getQuantity() const {return quantity;}                                                      //Mekkora a csomag?
@@ -78,8 +82,9 @@ private:
     std::vector<Product> orders;                                                                    //Felpakolt termékek
     
 public:
+    //Konstruktor
     Truck(int _ID, int p, int c) : ID(_ID), startPosition(p), position(p), max_capacity(c), payload(0), distance(0) {}
-
+    //Függvények
     int getID() const {return ID;}                                                                  //Melyik kamion?
     int freeSpace() const {return max_capacity-payload;}                                            //Mennyi üres hely van még?
     size_t numberOfProducts() const {return orders.size();}                                         //Hány db termék van felrakva?
@@ -101,7 +106,9 @@ private:
     unsigned deliveredProducts;                                                                     //Össz kiszállított termék
     
 public:
+    //Konstruktor
     Simulation(std::string graph, std::string simulation) : city(graph), deliveredProducts(0) {loadSimulation(simulation);}
+    //Függvények
     void loadSimulation(std::string);                                                               //Szimuláció betöltése
     void uploadTrucks(std::ostream&);                                                               //Kamionok feltöltése
     void deliveryProducts(std::ostream&);                                                           //Termékek kiszállítása
